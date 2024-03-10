@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimaxAlgorithm", "src\MinimaxAlgorithm\MinimaxAlgorithm.csproj", "{F7079592-0FCA-4DD3-9DAB-9CDE7CAF39D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimaxAlgorithm", "src\MinimaxAlgorithm\MinimaxAlgorithm.csproj", "{F7079592-0FCA-4DD3-9DAB-9CDE7CAF39D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MininaxTests.Unit", "tests\MininaxTests.Unit\MininaxTests.Unit.csproj", "{A7D38E34-447F-4F71-B055-E38CA1E51AEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F7079592-0FCA-4DD3-9DAB-9CDE7CAF39D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7079592-0FCA-4DD3-9DAB-9CDE7CAF39D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7079592-0FCA-4DD3-9DAB-9CDE7CAF39D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D38E34-447F-4F71-B055-E38CA1E51AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D38E34-447F-4F71-B055-E38CA1E51AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D38E34-447F-4F71-B055-E38CA1E51AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D38E34-447F-4F71-B055-E38CA1E51AEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
