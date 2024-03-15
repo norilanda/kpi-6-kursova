@@ -6,20 +6,31 @@ namespace MininaxTests.Unit.AlgorithmsTests;
 
 public class MinimaxTests
 {
+    private delegate IMinimax<int> AlgorithmFactoryDelegate();
     public static IEnumerable<object[]> GetTestData()
     {
-        return new List<object[]>
+        var AlgorithmFactories = new AlgorithmFactoryDelegate[]
         {
-            // brancingFactor, levels, algo
-            new object[] { 2, 2, new SequentialMinimax() },
-            new object[] { 2, 10, new SequentialMinimax() },
-            new object[] { 2, 20, new SequentialMinimax() },
-
-            new object[] { 50, 4, new SequentialMinimax() },
-
-            new object[] { 100, 3, new SequentialMinimax() },
-            new object[] { 1000, 2, new SequentialMinimax() },
+            () => new SequentialMinimax(),
+            () => new ParallelMinimax(),
         };
+
+        return AlgorithmFactories.SelectMany(createAlgo =>
+        {
+            return new List<object[]>
+            {
+                // brancingFactor, levels, algo
+
+                new object[] { 2, 2, createAlgo() },
+                new object[] { 2, 10, createAlgo() },
+                new object[] { 2, 20, createAlgo() },
+
+                new object[] { 50, 4, createAlgo() },
+
+                new object[] { 100, 3, createAlgo() },
+                new object[] { 1000, 2, createAlgo() },
+            };
+        }).ToList();
     }
 
     [Theory]
