@@ -3,9 +3,13 @@ using MinimaxAlgorithm.Models;
 
 namespace MinimaxAlgorithm.Algorithms;
 
-public class ParallelMinimax_ForEach(int depthLevelToParallel = 1) : IMinimax<int>
+public class ParallelMinimax_ForEach(
+    ParallelOptions options,
+    int depthLevelToParallel = 0
+    ) : IMinimax<int>
 {
     private readonly int _depthLevelToParallel = depthLevelToParallel;
+    private readonly ParallelOptions _options = options;
 
     public int MinimaxAlgo(NodeState root, bool isMaxPlayer = true)
     {
@@ -23,7 +27,7 @@ public class ParallelMinimax_ForEach(int depthLevelToParallel = 1) : IMinimax<in
 
             if (currentLevel == 0)
             {
-                Parallel.ForEach(root.Children!, child =>
+                Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = MinimaxAlgoInternal(child, currentLevel - 1, false);
                     maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
@@ -46,7 +50,7 @@ public class ParallelMinimax_ForEach(int depthLevelToParallel = 1) : IMinimax<in
 
             if (currentLevel == 0)
             {
-                Parallel.ForEach(root.Children!, child =>
+                Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = MinimaxAlgoInternal(child, currentLevel - 1, true);
                     minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);

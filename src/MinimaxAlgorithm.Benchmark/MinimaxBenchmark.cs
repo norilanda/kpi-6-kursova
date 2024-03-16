@@ -13,7 +13,7 @@ public class MinimaxBenchmark_2_20
 {
     private readonly IMinimax<int> _sequential = new SequentialMinimax();
     private readonly IMinimax<int> _parallelOverparallelized = new ParallelMinimax_OverparallelizedForEach();
-    private readonly IMinimax<int> _parallel= new ParallelMinimax_ForEach(1);
+    private readonly IMinimax<int> _parallel= new ParallelMinimax_ForEach(new ParallelOptions() {MaxDegreeOfParallelism = 16}, 1);
 
     private readonly NodeState _tree_2_20= TreeStateGenerator.GenerateSymetricTree(2, 20);
 

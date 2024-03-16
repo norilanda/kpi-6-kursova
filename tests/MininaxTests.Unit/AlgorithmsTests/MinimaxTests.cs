@@ -14,7 +14,7 @@ public class MinimaxTests
         {
             //() => new SequentialMinimax(),
             //() => new ParallelMinimax_OverparallelizedForEach(),
-            () => new ParallelMinimax_ForEach(),
+            () => new ParallelMinimax_ForEach(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };
 
         return AlgorithmFactories.SelectMany(createAlgo =>
