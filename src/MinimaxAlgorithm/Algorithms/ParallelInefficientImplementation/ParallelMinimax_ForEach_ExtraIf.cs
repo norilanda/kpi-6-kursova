@@ -1,9 +1,15 @@
 ﻿using MinimaxAlgorithm.Interfaces;
 using MinimaxAlgorithm.Models;
 
-namespace MinimaxAlgorithm.Algorithms;
+namespace MinimaxAlgorithm.Algorithms.ParallelInefficientImplementation;
 
-public class ParallelMinimax_ForEach(
+/// <summary>
+/// This implementation is inefficient 
+/// due to the additional 'if' statement within the recursion
+/// </summary>
+/// <param name="options"></param>
+/// <param name="depthLevelToParallel"></param>
+public class ParallelMinimax_ForEach_ExtraIf(
     ParallelOptions options,
     int depthLevelToParallel = 0
     ) : IMinimax<int>
