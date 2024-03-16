@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\DataGenerators\DataGenerators.csproj" />
     <ProjectReference Include="..\..\src\MinimaxAlgorithm\MinimaxAlgorithm.csproj" />
   </ItemGroup>
 

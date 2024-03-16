@@ -1,9 +1,14 @@
 ﻿using MinimaxAlgorithm.Interfaces;
 using MinimaxAlgorithm.Models;
 
-namespace MinimaxAlgorithm.Algorithms;
+namespace MinimaxAlgorithm.Algorithms.ParallelInefficientImplementation;
 
-public class ParallelMinimax : IMinimax<int>
+/// <summary>
+/// This implementation is inefficient due to excessive parallelization.
+/// While it may work well for trees with many branches and shallow depth,
+/// it incurs significant overhead when the branch count is small.
+/// </summary>
+public class ParallelMinimax_OverparallelizedForEach : IMinimax<int>
 {
     public int MinimaxAlgo(NodeState root, bool isMaxPlayer = true)
     {
@@ -14,7 +19,7 @@ public class ParallelMinimax : IMinimax<int>
         {
             int maxEvaluatedValue = int.MinValue;
 
-            Parallel.ForEach (root.Children!, child =>
+            Parallel.ForEach(root.Children!, child =>
             {
                 var childEvaluatedValue = MinimaxAlgo(child, false);
                 maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
@@ -26,7 +31,7 @@ public class ParallelMinimax : IMinimax<int>
         {
             int minEvaluatedValue = int.MaxValue;
 
-            Parallel.ForEach (root.Children!, child =>
+            Parallel.ForEach(root.Children!, child =>
             {
                 var childEvaluatedValue = MinimaxAlgo(child, true);
                 minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);

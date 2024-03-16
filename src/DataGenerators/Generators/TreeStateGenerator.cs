@@ -1,6 +1,6 @@
 ﻿using MinimaxAlgorithm.Models;
 
-namespace MininaxTests.Unit.Generators;
+namespace DataGenerators.Generators;
 
 // TODO: move the common logic out
 public static class TreeStateGenerator
