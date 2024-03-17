@@ -1,5 +1,4 @@
-﻿using MinimaxAlgorithm.Algorithms.ParallelInefficientImplementation;
-using MinimaxAlgorithm.Algorithms;
+﻿using MinimaxAlgorithm.Algorithms;
 using MinimaxAlgorithm.Interfaces;
 using DataGenerators.Generators;
 
@@ -9,7 +8,7 @@ public class ParallelMinimaxTests
 {
     private delegate IMinimax<int> AlgorithmFactoryDelegate();
 
-    private IMinimax<int> _sequential = new SequentialMinimax();
+    private readonly IMinimax<int> _sequential = new SequentialMinimax();
     public static IEnumerable<object[]> GetTestData()
     {
         var AlgorithmFactories = new AlgorithmFactoryDelegate[]
@@ -24,15 +23,14 @@ public class ParallelMinimaxTests
             {
                 // brancingFactor, levels, algo
 
-                new object[] { 2, 22, createAlgo() },
-                new object[] { 3, 15, createAlgo() },
+                //new object[] { 2, 22, createAlgo() },
+                //new object[] { 3, 15, createAlgo() },
 
-                new object[] { 60, 5, createAlgo() },
-                //new object[] { 80, 5, createAlgo() },
+                //new object[] { 60, 4, createAlgo() },
 
-                //new object[] { 100, 4, createAlgo() },
-                //new object[] { 1000, 3, createAlgo() },
-                //new object[] { 2000, 2, createAlgo() },
+                new object[] { 2000, 2, createAlgo() },
+                new object[] { 3000, 2, createAlgo() },
+                new object[] { 4000, 2, createAlgo() },
             };
         }).ToList();
     }

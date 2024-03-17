@@ -11,6 +11,7 @@ public class ParallelMinimax_ForEach_FirstLevel (
     public int MinimaxAlgo(NodeState root, bool isMaxPlayer = true)
     {
         int result;
+        object lockObject = new();
 
         if (isMaxPlayer)
         {
@@ -18,7 +19,10 @@ public class ParallelMinimax_ForEach_FirstLevel (
             Parallel.ForEach(root.Children!, _options, child =>
             {
                 var childEvaluatedValue = MinimaxAlgoInternal(child, false);
-                result = Math.Max(result, childEvaluatedValue);
+                lock (lockObject)
+                {
+                    result = Math.Max(result, childEvaluatedValue);
+                }
             });
         }
         else
@@ -28,7 +32,10 @@ public class ParallelMinimax_ForEach_FirstLevel (
             Parallel.ForEach(root.Children!, _options, child =>
             {
                 var childEvaluatedValue = MinimaxAlgoInternal(child, true);
-                result = Math.Min(result, childEvaluatedValue);
+                lock (lockObject)
+                {
+                    result = Math.Min(result, childEvaluatedValue);
+                }
             });
         }
         return result;

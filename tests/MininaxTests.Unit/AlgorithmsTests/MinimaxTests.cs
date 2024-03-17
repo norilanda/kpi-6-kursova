@@ -1,7 +1,6 @@
 ﻿using MinimaxAlgorithm.Algorithms;
 using MinimaxAlgorithm.Interfaces;
 using DataGenerators.Generators;
-using MinimaxAlgorithm.Algorithms.ParallelInefficientImplementation;
 
 namespace MininaxTests.Unit.AlgorithmsTests;
 
@@ -13,8 +12,6 @@ public class MinimaxTests
         var AlgorithmFactories = new AlgorithmFactoryDelegate[]
         {
             () => new SequentialMinimax(),
-            () => new ParallelMinimax_OverparallelizedForEach(),
-            () => new ParallelMinimax_ForEach_ExtraIf(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
             () => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
             () => new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };

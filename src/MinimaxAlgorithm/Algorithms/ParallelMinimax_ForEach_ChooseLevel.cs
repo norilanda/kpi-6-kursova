@@ -22,6 +22,7 @@ public class ParallelMinimax_ForEach_ChooseLevel (
             return root.Value;
 
         Interlocked.Add(ref _totalCreatedTasks, root.Children?.Count ?? 0);
+        object lockObject = new();
 
         if (isMaxPlayer)
         {
@@ -32,7 +33,10 @@ public class ParallelMinimax_ForEach_ChooseLevel (
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = MinimaxAlgoInternal(child, false);
-                    maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
+                    lock (lockObject)
+                    {
+                        maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
+                    }
                 });
             }
             else
@@ -40,7 +44,10 @@ public class ParallelMinimax_ForEach_ChooseLevel (
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = ParallelizeMinimax(child, false);
-                    maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
+                    lock (lockObject)
+                    {
+                        maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
+                    }
                 });
             }
 
@@ -55,7 +62,10 @@ public class ParallelMinimax_ForEach_ChooseLevel (
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = MinimaxAlgoInternal(child, true);
-                    minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);
+                    lock (lockObject)
+                    {
+                        minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);
+                    }
                 });
             }
             else
@@ -63,7 +73,10 @@ public class ParallelMinimax_ForEach_ChooseLevel (
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
                     var childEvaluatedValue = ParallelizeMinimax(child, true);
-                    minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);
+                    lock (lockObject)
+                    {
+                        minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);
+                    }
                 });
             }
 
