@@ -12,10 +12,10 @@ public class MinimaxTests
     {
         var AlgorithmFactories = new AlgorithmFactoryDelegate[]
         {
-            //() => new SequentialMinimax(),
-            //() => new ParallelMinimax_OverparallelizedForEach(),
-            //() => new ParallelMinimax_ForEach(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
-            //() => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
+            () => new SequentialMinimax(),
+            () => new ParallelMinimax_OverparallelizedForEach(),
+            () => new ParallelMinimax_ForEach_ExtraIf(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
+            () => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
             () => new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };
 

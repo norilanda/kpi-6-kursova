@@ -8,23 +8,26 @@ public class ParallelMinimax_ForEach_ChooseLevel (
 {
     private readonly ParallelOptions _options = options;
 
+    private int _totalCreatedTasks = 0;
+
     public int MinimaxAlgo(NodeState root, bool isMaxPlayer = true)
     {
-        // TODO: add better logic for level calculation
-        var level = options.MaxDegreeOfParallelism > root.Children?.Count ? 1 : 0;
-        return ParallelizeMinimax(root, level, isMaxPlayer);
+        _totalCreatedTasks = 0;
+        return ParallelizeMinimax(root, isMaxPlayer);
     }
 
-    private int ParallelizeMinimax(NodeState root, int currentLevel, bool isMaxPlayer = true)
+    private int ParallelizeMinimax(NodeState root, bool isMaxPlayer = true)
     {
         if (root.IsTerminatedNode())
             return root.Value;
+
+        Interlocked.Add(ref _totalCreatedTasks, root.Children?.Count ?? 0);
 
         if (isMaxPlayer)
         {
             int maxEvaluatedValue = int.MinValue;
 
-            if (currentLevel == 0)
+            if (_totalCreatedTasks < options.MaxDegreeOfParallelism)
             {
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
@@ -34,11 +37,11 @@ public class ParallelMinimax_ForEach_ChooseLevel (
             }
             else
             {
-                foreach (var child in root.Children!)
+                Parallel.ForEach(root.Children!, _options, child =>
                 {
-                    var childEvaluatedValue = ParallelizeMinimax(child, currentLevel - 1, false);
+                    var childEvaluatedValue = ParallelizeMinimax(child, false);
                     maxEvaluatedValue = Math.Max(maxEvaluatedValue, childEvaluatedValue);
-                }
+                });
             }
 
             return maxEvaluatedValue;
@@ -47,7 +50,7 @@ public class ParallelMinimax_ForEach_ChooseLevel (
         {
             int minEvaluatedValue = int.MaxValue;
 
-            if (currentLevel == 0)
+            if (_totalCreatedTasks < options.MaxDegreeOfParallelism)
             {
                 Parallel.ForEach(root.Children!, _options, child =>
                 {
@@ -57,11 +60,11 @@ public class ParallelMinimax_ForEach_ChooseLevel (
             }
             else
             {
-                foreach (var child in root.Children!)
+                Parallel.ForEach(root.Children!, _options, child =>
                 {
-                    var childEvaluatedValue = ParallelizeMinimax(child, currentLevel - 1, true);
+                    var childEvaluatedValue = ParallelizeMinimax(child, true);
                     minEvaluatedValue = Math.Min(minEvaluatedValue, childEvaluatedValue);
-                }
+                });
             }
 
             return minEvaluatedValue;

@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using MinimaxAlgorithm.Benchmark;
+using MinimaxAlgorithm.Benchmark.TreeSizeBenchmarks;
 
-BenchmarkRunner.Run<MinimaxBenchmark_2_20>();
+BenchmarkRunner.Run<MinimaxBenchmark_2_25_16>();

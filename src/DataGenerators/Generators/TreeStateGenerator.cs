@@ -2,7 +2,6 @@
 
 namespace DataGenerators.Generators;
 
-// TODO: move the common logic out
 public static class TreeStateGenerator
 {
     /// <summary>
@@ -17,29 +16,9 @@ public static class TreeStateGenerator
             .Select(x => new NodeState(x));
 
         var currentLevelNodes = terminatedNodes.ToList();
+        var currentLevelNodeNumber = CalculateTerminatedNodesNumber(branchingFactor, levels);
 
-        for (int i = levels; i > 0; i--)
-        {
-            var previousLevelNodes = new List<NodeState>();
-            int previousLevelNodeNumber = currentLevelNodes.Count / branchingFactor;
-
-            for (int j = 0; j < previousLevelNodeNumber; j++)
-            {
-                var startOffset = j * branchingFactor;
-
-                var node = new NodeState()
-                {
-                    Children = currentLevelNodes
-                    .Skip(startOffset)
-                    .Take(branchingFactor)
-                    .ToList()
-                };
-                previousLevelNodes.Add(node);
-            }
-            currentLevelNodes = previousLevelNodes;
-        }
-
-        return currentLevelNodes.Single();
+        return GeneratemSymetricTree(branchingFactor, levels, currentLevelNodes, currentLevelNodeNumber);
     }
 
     public static int CalculateRootNodeValueForSymetricTree(int branchingFactor, int levels, bool isMaxPlayerFirst = true)
@@ -72,11 +51,66 @@ public static class TreeStateGenerator
         return currentLevelNodes.Single();
     }
 
+    public static NodeState GenerateRandomSymetricTree(int branchingFactor, int levels)
+    {
+        var terminatedNodes = GetRandomTerminatedValues(branchingFactor, levels)
+            .Select(x => new NodeState(x));
+
+        var currentLevelNodes = terminatedNodes.ToList();
+        var currentLevelNodeNumber = CalculateTerminatedNodesNumber(branchingFactor, levels);
+
+        return GeneratemSymetricTree(branchingFactor, levels, currentLevelNodes, currentLevelNodeNumber);
+    }
+
+    private static NodeState GeneratemSymetricTree(int branchingFactor, int levels, IEnumerable<NodeState> currentLevelNodes, long currentLevelNodeNumber)
+    {
+        for (int i = levels; i > 0; i--)
+        {
+            var previousLevelNodes = new List<NodeState>();
+            long previousLevelNodeNumber = currentLevelNodeNumber / branchingFactor;
+
+            for (int j = 0; j < previousLevelNodeNumber; j++)
+            {
+                var startOffset = j * branchingFactor;
+
+                var node = new NodeState()
+                {
+                    Children = currentLevelNodes
+                    .Skip(startOffset)
+                    .Take(branchingFactor)
+                    .ToList()
+                };
+                previousLevelNodes.Add(node);
+            }
+            currentLevelNodes = previousLevelNodes;
+            currentLevelNodeNumber = previousLevelNodeNumber;
+        }
+
+        return currentLevelNodes.Single();
+    }
+
     private static IEnumerable<int> GetTerminatedValues(int branchingFactor, int levels)
     {
-        int terminatedNodesNumber = (int)Math.Pow(branchingFactor, levels);
+        int terminatedNodesNumber = (int)CalculateTerminatedNodesNumber(branchingFactor, levels);
         var terminatedNodes = Enumerable.Range(1, terminatedNodesNumber);
         return terminatedNodes;
+    }
+
+    private static IEnumerable<int> GetRandomTerminatedValues(int branchingFactor, int levels)
+    {
+        long terminatedNodesNumber = CalculateTerminatedNodesNumber(branchingFactor, levels);
+
+        Random random = new(0);
+        for (int i = 0; i < terminatedNodesNumber; i++)
+        {
+            yield return random.Next();
+        }
+
+    }
+
+    private static long CalculateTerminatedNodesNumber(int branchingFactor, int levels)
+    {
+        return (long)Math.Pow(branchingFactor, levels);
     }
 
     private static bool IsLastMoveDoneByMinPlayer(int levels, bool isMaxPlayerStart)
