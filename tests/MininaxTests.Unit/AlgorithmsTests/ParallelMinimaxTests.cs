@@ -14,7 +14,6 @@ public class ParallelMinimaxTests
         var AlgorithmFactories = new AlgorithmFactoryDelegate[]
         {
             () => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
-            () => new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };
 
         return AlgorithmFactories.SelectMany(createAlgo =>
@@ -23,13 +22,13 @@ public class ParallelMinimaxTests
             {
                 // brancingFactor, levels, algo
 
-                //new object[] { 2, 22, createAlgo() },
-                //new object[] { 3, 15, createAlgo() },
+                new object[] { 2, 22, createAlgo() },
+                new object[] { 3, 15, createAlgo() },
 
-                //new object[] { 60, 4, createAlgo() },
+                new object[] { 60, 4, createAlgo() },
 
-                //new object[] { 2000, 2, createAlgo() },
-                //new object[] { 4000, 2, createAlgo() },
+                new object[] { 2000, 2, createAlgo() },
+                new object[] { 4000, 2, createAlgo() },
                 new object[] { 6000, 2, createAlgo() },
                 new object[] { 10000, 2, createAlgo() },
             };

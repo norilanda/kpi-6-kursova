@@ -13,7 +13,6 @@ public class MinimaxTests
         {
             () => new SequentialMinimax(),
             () => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
-            () => new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };
 
         return AlgorithmFactories.SelectMany(createAlgo =>

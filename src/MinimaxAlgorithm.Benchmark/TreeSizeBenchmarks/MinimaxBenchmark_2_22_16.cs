@@ -16,7 +16,6 @@ public class MinimaxBenchmark_2_22_16
     private readonly IMinimax<int> _sequential = new SequentialMinimax();
 
     private readonly IMinimax<int> _parallelForeachFirstLevel= new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16});
-    private readonly IMinimax<int> _parallelForeachChooseLevel = new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16});
 
     private readonly NodeState _tree = TreeStateGenerator.GenerateSymetricTree(2, 22);
 
@@ -30,11 +29,5 @@ public class MinimaxBenchmark_2_22_16
     public void Parallel_Foreach_FirstLevel_2_22_16()
     {
         _parallelForeachFirstLevel.MinimaxAlgo(_tree);
-    }
-
-    [Benchmark]
-    public void Parallel_Foreach_ChooseLevel_2_22_16()
-    {
-        _parallelForeachChooseLevel.MinimaxAlgo(_tree);
     }
 }
