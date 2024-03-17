@@ -28,9 +28,10 @@ public class ParallelMinimaxTests
 
                 //new object[] { 60, 4, createAlgo() },
 
-                new object[] { 2000, 2, createAlgo() },
-                new object[] { 3000, 2, createAlgo() },
-                new object[] { 4000, 2, createAlgo() },
+                //new object[] { 2000, 2, createAlgo() },
+                //new object[] { 4000, 2, createAlgo() },
+                new object[] { 6000, 2, createAlgo() },
+                new object[] { 10000, 2, createAlgo() },
             };
         }).ToList();
     }
