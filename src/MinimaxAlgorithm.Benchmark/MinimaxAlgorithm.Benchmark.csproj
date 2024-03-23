@@ -16,8 +16,4 @@
     <ProjectReference Include="..\MinimaxAlgorithm\MinimaxAlgorithm.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ThreadPoolNumberBenchmarks\" />
-  </ItemGroup>
-
 </Project>

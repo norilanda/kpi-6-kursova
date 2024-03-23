@@ -41,6 +41,12 @@ public class ParallelMinimax_ForEach_FirstLevel (
         return result;
     }
 
+    /// <summary>
+    /// Same as the sequential version
+    /// </summary>
+    /// <param name="root"></param>
+    /// <param name="isMaxPlayer"></param>
+    /// <returns></returns>
     private int MinimaxAlgoInternal(NodeState root, bool isMaxPlayer = true)
     {
         if (root.IsTerminatedNode())
