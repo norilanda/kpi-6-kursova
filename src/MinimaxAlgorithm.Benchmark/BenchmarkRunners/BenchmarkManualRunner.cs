@@ -10,9 +10,9 @@ internal class BenchmarkManualRunner: IBenchmarkRunner
     public void Run()
     {
         Console.WriteLine("Running RunSequentialBranchingFactorBenchmarks:");
-        //RunSequentialBranchingFactorBenchmarks();
+        RunSequentialBranchingFactorBenchmarks();
         Console.WriteLine("\nRunning RunSequentialDepthFactorBenchmarks:");
-        //RunSequentialDepthFactorBenchmarks();
+        RunSequentialDepthFactorBenchmarks();
         Console.WriteLine("\nRunning RunThreadPoolNumberBenchmarks:");
         RunThreadPoolNumberBenchmarks();
         Console.WriteLine("\nRunning RunTreeSizeBenchmarks:");
@@ -21,22 +21,20 @@ internal class BenchmarkManualRunner: IBenchmarkRunner
 
     public void RunSequentialBranchingFactorBenchmarks()
     {
-        ManualBenchmarkRunner.Run<SequentialBranchingFactorBenchmark>();
+        ManualBenchmarkRunner.Run<ParallelFirstLevelBranchingFactorBenchmark>();
     }
     public void RunSequentialDepthFactorBenchmarks()
     {
-        ManualBenchmarkRunner.Run<SequentialDepthLevelBenchmark>();
+        ManualBenchmarkRunner.Run<ParallelFirstLevelDepthBenchmark>();
     }
 
     public void RunTreeSizeBenchmarks()
     {
         ThreadPool.SetMinThreads(16, 16);
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_2_22_16>();
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_16_6_16>();
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_60_4_16>();
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_250_3_16>();
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_3000_2_16>();
-        ManualBenchmarkRunner.Run<MinimaxBenchmark_10000_2_16>();
+        ManualBenchmarkRunner.Run<ParallelFirstLevelBranchingFactorBenchmark>();
+        ManualBenchmarkRunner.Run<ParallelChooseLevelBranchingFactorBenchmark>();
+        ManualBenchmarkRunner.Run<ParallelFirstLevelDepthBenchmark>();
+        ManualBenchmarkRunner.Run<ParallelChooseLevelDepthBenchmark>();
     }
 
     public void RunThreadPoolNumberBenchmarks()

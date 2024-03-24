@@ -7,9 +7,9 @@ using MinimaxAlgorithm.Models;
 
 namespace MinimaxAlgorithm.Benchmark.SequentialBenchmarks;
 
-public class SequentialDepthLevelBenchmark
+public class ParallelChooseLevelDepthBenchmark
 {
-    private readonly IMinimax<int> _sequential = new SequentialMinimax();
+    private readonly IMinimax<int> _parallel = new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16});
 
     private readonly NodeState _tree_5_3 = TreeGetter.Tree_5_3;
     private readonly NodeState _tree_5_5 = TreeGetter.Tree_5_5;
@@ -19,36 +19,36 @@ public class SequentialDepthLevelBenchmark
 
 
     [Benchmark(Baseline = true)]
-    [ManualBenchmarkAttribute]
-    public void Sequential_5_3()
+    [ManualBenchmark]
+    public void Parallel_Foreach_ChooseLevel_5_3()
     {
-        _sequential.MinimaxAlgo(_tree_5_3);
+        _parallel.MinimaxAlgo(_tree_5_3);
     }
 
     [Benchmark]
     [ManualBenchmark]
-    public void Sequential_5_5()
+    public void Parallel_Foreach_ChooseLevel_5_5()
     {
-        _sequential.MinimaxAlgo(_tree_5_5);
+        _parallel.MinimaxAlgo(_tree_5_5);
     }
 
     [Benchmark]
     [ManualBenchmark]
-    public void Sequential_5_8()
+    public void Parallel_Foreach_ChooseLevel_5_8()
     {
-        _sequential.MinimaxAlgo(_tree_5_8);
+        _parallel.MinimaxAlgo(_tree_5_8);
     }
 
     [Benchmark]
     [ManualBenchmark]
-    public void Sequential_5_10()
+    public void Parallel_Foreach_ChooseLevel_5_10()
     {
-        _sequential.MinimaxAlgo(_tree_5_10);
+        _parallel.MinimaxAlgo(_tree_5_10);
     }
 
     [ManualBenchmark]
-    public void Sequential_5_11()
+    public void Parallel_Foreach_ChooseLevel_5_11()
     {
-        _sequential.MinimaxAlgo(_tree_5_11);
+        _parallel.MinimaxAlgo(_tree_5_11);
     }
 }

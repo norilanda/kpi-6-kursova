@@ -3,58 +3,73 @@ using MinimaxAlgorithm.Models;
 
 namespace MinimaxAlgorithm.Algorithms;
 
-public class ParallelMinimax_ForEach_FirstLevel (
+public class ParallelMinimax_ForEach_ChooseLevel (
         ParallelOptions options): MinimaxBase, IMinimax<int>
 {
     private readonly ParallelOptions _options = options;
 
     public int MinimaxAlgo(NodeState root, bool isMaxPlayer = true)
     {
-        int result;
+        var level = options.MaxDegreeOfParallelism > root.Children?.Count ? 1 : 0;
+        return ParallelizeMinimax(root, level, isMaxPlayer);
+    }
+
+    private int ParallelizeMinimax(NodeState root, int currentLevel, bool isMaxPlayer = true)
+    {
+        if (root.IsTerminatedNode())
+            return root.Value;
+
         object lockObject = new();
+
+        Func<NodeState, bool, int> minimaxFunc = currentLevel == 0 
+            ? MinimaxAlgoInternal
+            : (NodeState root, bool isMaxPlayer ) => ParallelizeMinimax(root, currentLevel - 1, isMaxPlayer);
 
         if (isMaxPlayer)
         {
-            result = int.MinValue;
+            int maxEvaluatedValue = int.MinValue;
+
             Parallel.ForEach(
                 root.Children!, 
-                _options,
+                _options, 
                 () => int.MinValue,
                 (child, state, localValue) =>
                 {
-                    var childEvaluatedValue = MinimaxAlgoInternal(child, false);
+                    var childEvaluatedValue = minimaxFunc(child, false);
                     return Math.Max(localValue, childEvaluatedValue);
                 },
                 localValue =>
                 {
                     lock (lockObject)
                     {
-                        result = Math.Max(result, localValue);
+                        maxEvaluatedValue = Math.Max(maxEvaluatedValue, localValue);
                     }
                 });
+
+            return maxEvaluatedValue;
         }
         else
         {
-            result = int.MaxValue;
+            int minEvaluatedValue = int.MaxValue;
 
             Parallel.ForEach(
                 root.Children!, 
-                _options,
+                _options, 
                 () => int.MaxValue,
                 (child, state, localValue) =>
                 {
-                    var childEvaluatedValue = MinimaxAlgoInternal(child, true);
+                    var childEvaluatedValue = minimaxFunc(child, true);
                     return Math.Min(localValue, childEvaluatedValue);
                 },
                 localValue =>
                 {
                     lock (lockObject)
                     {
-                        result = Math.Min(result, localValue);
+                        minEvaluatedValue = Math.Min(minEvaluatedValue, localValue);
                     }
                 });
+
+            return minEvaluatedValue;
         }
-        return result;
     }
 }
-

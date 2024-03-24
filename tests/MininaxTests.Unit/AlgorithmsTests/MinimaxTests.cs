@@ -11,8 +11,9 @@ public class MinimaxTests
     {
         var AlgorithmFactories = new AlgorithmFactoryDelegate[]
         {
-            () => new SequentialMinimax(),
+            //() => new SequentialMinimax(),
             () => new ParallelMinimax_ForEach_FirstLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
+            //() => new ParallelMinimax_ForEach_ChooseLevel(new ParallelOptions() {MaxDegreeOfParallelism = 16}),
         };
 
         return AlgorithmFactories.SelectMany(createAlgo =>

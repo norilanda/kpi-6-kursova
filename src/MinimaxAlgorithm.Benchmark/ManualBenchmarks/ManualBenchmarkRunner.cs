@@ -11,6 +11,8 @@ internal static class ManualBenchmarkRunner
 
     public static void Run<TBenchmark>() where TBenchmark : new()
     {
+        Console.WriteLine("Warming up");
+
         var benchmark = new TBenchmark();
         var methods = typeof(TBenchmark).GetMethods()
             .Where(x => x.CustomAttributes.Any(
@@ -18,9 +20,23 @@ internal static class ManualBenchmarkRunner
             .ToList();
         foreach (var method in methods)
         {
-            Run(method.Name, () => method.Invoke(benchmark, null));
+            Run(method.Name, (Action) Delegate.CreateDelegate(typeof(Action), benchmark, method));
         }
         Console.WriteLine("=============================================================");
+    }
+
+    public static void WarmUp<TBenchmark>() where TBenchmark : new()
+    {
+        WarmUp<TBenchmark>();
+        var benchmark = new TBenchmark();
+        var methods = typeof(TBenchmark).GetMethods()
+            .Where(x => x.CustomAttributes.Any(
+                               attribute => attribute.AttributeType.Name.Equals("ManualBenchmarkAttribute")))
+            .ToList();
+        foreach (var method in methods)
+        {
+            RunAlgorithmTest((Action) Delegate.CreateDelegate(typeof(Action), benchmark, method));
+        }
     }
 
     private static void Run(string algoName, Action callAlgo)

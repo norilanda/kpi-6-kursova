@@ -17,22 +17,20 @@ internal class BenchmarkDotNetRunner: IBenchmarkRunner
 
     public void RunSequentialBranchingFactorBenchmarks()
     {
-        BenchmarkRunner.Run<SequentialBranchingFactorBenchmark>();
+        BenchmarkRunner.Run<ParallelFirstLevelBranchingFactorBenchmark>();
     }
     public void RunSequentialDepthFactorBenchmarks()
     {
-        BenchmarkRunner.Run<SequentialDepthLevelBenchmark>();
+        BenchmarkRunner.Run<ParallelFirstLevelDepthBenchmark>();
     }
 
     public void RunTreeSizeBenchmarks()
     {
         ThreadPool.SetMinThreads(16, 16);
-        BenchmarkRunner.Run<MinimaxBenchmark_2_22_16>();
-        BenchmarkRunner.Run<MinimaxBenchmark_16_6_16>();
-        BenchmarkRunner.Run<MinimaxBenchmark_60_4_16>();
-        BenchmarkRunner.Run<MinimaxBenchmark_250_3_16>();
-        BenchmarkRunner.Run<MinimaxBenchmark_3000_2_16>();
-        BenchmarkRunner.Run<MinimaxBenchmark_10000_2_16>();
+        BenchmarkRunner.Run<ParallelFirstLevelBranchingFactorBenchmark>();
+        BenchmarkRunner.Run<ParallelChooseLevelBranchingFactorBenchmark>();
+        BenchmarkRunner.Run<ParallelFirstLevelDepthBenchmark>();
+        BenchmarkRunner.Run<ParallelChooseLevelDepthBenchmark>();
     }
 
     public void RunThreadPoolNumberBenchmarks()
@@ -44,5 +42,7 @@ internal class BenchmarkDotNetRunner: IBenchmarkRunner
         BenchmarkRunner.Run<MinimaxBenchmark_4>();
         ThreadPool.SetMinThreads(8, 8);
         BenchmarkRunner.Run<MinimaxBenchmark_8>();
+        ThreadPool.SetMinThreads(16, 16);
+        BenchmarkRunner.Run<MinimaxBenchmark_16>();
     }
 }
