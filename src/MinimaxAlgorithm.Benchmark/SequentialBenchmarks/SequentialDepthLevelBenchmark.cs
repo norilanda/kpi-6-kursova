@@ -19,7 +19,7 @@ public class SequentialDepthLevelBenchmark
 
 
     [Benchmark(Baseline = true)]
-    [ManualBenchmarkAttribute]
+    [ManualBenchmark]
     public void Sequential_5_3()
     {
         _sequential.MinimaxAlgo(_tree_5_3);
