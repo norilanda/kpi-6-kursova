@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="c42578ab-fd8b-4009-9744-c1e7fbb5e704" name="ACER@ACERNITRO5 2025-11-24 13:06:17" runUser="ACERNITRO5\ACER" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-24T13:06:17.2368361+01:00" queuing="2025-11-24T13:06:17.2368368+01:00" start="2025-11-24T13:06:14.4002782+01:00" finish="2025-11-24T13:07:08.4010875+01:00" />
+  <TestSettings name="default" id="c4b10754-481d-4f70-ac48-6bae4a7d0c77">
+    <Deployment runDeploymentRoot="ACER_ACERNITRO5_2025-11-24_13_06_17" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b1841ef1-8194-4c8d-8779-68bef95205d5" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 4000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.8048907" startTime="2025-11-24T13:07:08.2587814+01:00" endTime="2025-11-24T13:07:08.2587822+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1841ef1-8194-4c8d-8779-68bef95205d5" />
+    <UnitTestResult executionId="6f0275c5-3f6f-4527-9bea-e6ef078732f7" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 22, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:02.3575376" startTime="2025-11-24T13:06:48.3990951+01:00" endTime="2025-11-24T13:06:48.3990955+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f0275c5-3f6f-4527-9bea-e6ef078732f7" />
+    <UnitTestResult executionId="8ab3f957-bd36-4153-bcc8-3e6f961e4379" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.1907444" startTime="2025-11-24T13:06:24.2946119+01:00" endTime="2025-11-24T13:06:24.2946125+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ab3f957-bd36-4153-bcc8-3e6f961e4379">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   9901</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d9bb80c-de87-4f7b-866d-04d9de103543" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.0010342" startTime="2025-11-24T13:06:16.3445623+01:00" endTime="2025-11-24T13:06:16.3445625+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d9bb80c-de87-4f7b-866d-04d9de103543">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   342</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e1bcb125-1f8f-40c3-814a-efc73559ff1c" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.9060658" startTime="2025-11-24T13:06:32.0826306+01:00" endTime="2025-11-24T13:06:32.0826309+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1bcb125-1f8f-40c3-814a-efc73559ff1c" />
+    <UnitTestResult executionId="035f1610-4d29-4a43-afb7-1acae7f5ff5f" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.0968348" startTime="2025-11-24T13:06:28.1481488+01:00" endTime="2025-11-24T13:06:28.1481491+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="035f1610-4d29-4a43-afb7-1acae7f5ff5f" />
+    <UnitTestResult executionId="7eaca0db-ab8a-4154-bb86-08e6575fe3f8" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:01.3584919" startTime="2025-11-24T13:06:17.6916090+01:00" endTime="2025-11-24T13:06:17.6916092+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7eaca0db-ab8a-4154-bb86-08e6575fe3f8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   349526</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b7beaf29-d2c7-4709-b9df-a5dc1e525b47" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 3, levels: 15, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:04.7571141" startTime="2025-11-24T13:06:53.1562807+01:00" endTime="2025-11-24T13:06:53.1562810+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7beaf29-d2c7-4709-b9df-a5dc1e525b47" />
+    <UnitTestResult executionId="8ac92eed-caf3-4ac2-ae36-2ad5ee110b26" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 22, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:02.3167840" startTime="2025-11-24T13:06:59.5051521+01:00" endTime="2025-11-24T13:06:59.5051525+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ac92eed-caf3-4ac2-ae36-2ad5ee110b26" />
+    <UnitTestResult executionId="be41d3ee-25b6-455a-bb88-f4e80dae9294" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 60, levels: 4, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:02.9645748" startTime="2025-11-24T13:06:32.4900687+01:00" endTime="2025-11-24T13:06:32.4900691+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be41d3ee-25b6-455a-bb88-f4e80dae9294" />
+    <UnitTestResult executionId="62a0d49f-eef0-4bd0-94e7-8560852b2c67" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0812838" startTime="2025-11-24T13:06:32.2562581+01:00" endTime="2025-11-24T13:06:32.2562585+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62a0d49f-eef0-4bd0-94e7-8560852b2c67" />
+    <UnitTestResult executionId="fe142781-b565-4f12-b55c-b67ba74da0f4" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.1054237" startTime="2025-11-24T13:06:21.3547554+01:00" endTime="2025-11-24T13:06:21.3547559+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe142781-b565-4f12-b55c-b67ba74da0f4">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   1000</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="06c144eb-b85a-4d83-b73f-feda84077190" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.3981963" startTime="2025-11-24T13:06:44.1438184+01:00" endTime="2025-11-24T13:06:44.1438188+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06c144eb-b85a-4d83-b73f-feda84077190" />
+    <UnitTestResult executionId="fa803f4a-d7df-46ed-b0fc-b2b8fa619e8e" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 22, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:02.2143299" startTime="2025-11-24T13:06:37.4334411+01:00" endTime="2025-11-24T13:06:37.4334415+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa803f4a-d7df-46ed-b0fc-b2b8fa619e8e" />
+    <UnitTestResult executionId="26176a4f-b47a-46f4-8697-81ed0b5a4a86" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.1068068" startTime="2025-11-24T13:06:19.4926146+01:00" endTime="2025-11-24T13:06:19.4926150+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26176a4f-b47a-46f4-8697-81ed0b5a4a86">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   9901</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9ad6a9bb-5bae-4a41-8ec3-a3f3918cab01" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0006810" startTime="2025-11-24T13:06:21.3575454+01:00" endTime="2025-11-24T13:06:21.3575461+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ad6a9bb-5bae-4a41-8ec3-a3f3918cab01">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   342</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6eff9bd-e70a-4557-a5d2-69f8918b825f" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:01.8483955" startTime="2025-11-24T13:06:27.8425927+01:00" endTime="2025-11-24T13:06:27.8425938+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6eff9bd-e70a-4557-a5d2-69f8918b825f" />
+    <UnitTestResult executionId="d9277218-bd8e-4a88-b1e3-96edcb89d698" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 3, levels: 15, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:04.5299477" startTime="2025-11-24T13:06:41.9634472+01:00" endTime="2025-11-24T13:06:41.9634475+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9277218-bd8e-4a88-b1e3-96edcb89d698" />
+    <UnitTestResult executionId="c884cbe0-0db8-4329-852c-c81d420b0c26" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0921867" startTime="2025-11-24T13:06:32.1749080+01:00" endTime="2025-11-24T13:06:32.1749085+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c884cbe0-0db8-4329-852c-c81d420b0c26" />
+    <UnitTestResult executionId="e59fe5c7-8a49-4b9c-bb85-ee225d62fccf" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.0001429" startTime="2025-11-24T13:06:24.4740708+01:00" endTime="2025-11-24T13:06:24.4740709+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e59fe5c7-8a49-4b9c-bb85-ee225d62fccf" />
+    <UnitTestResult executionId="d3e7f723-034b-43b7-801b-c255f3a4e3e5" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 4000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:01.8167008" startTime="2025-11-24T13:06:35.2190126+01:00" endTime="2025-11-24T13:06:35.2190133+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3e7f723-034b-43b7-801b-c255f3a4e3e5" />
+    <UnitTestResult executionId="92c5b446-1bbd-4925-97ec-d2c8f97e9b22" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.8506474" startTime="2025-11-24T13:06:31.1764369+01:00" endTime="2025-11-24T13:06:31.1764375+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92c5b446-1bbd-4925-97ec-d2c8f97e9b22" />
+    <UnitTestResult executionId="69651fd1-4568-406d-af86-0712b2e52992" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.0005326" startTime="2025-11-24T13:06:24.4745517+01:00" endTime="2025-11-24T13:06:24.4745522+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69651fd1-4568-406d-af86-0712b2e52992" />
+    <UnitTestResult executionId="beb515b2-564d-48e1-9b2b-971f2102c693" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.1570692" startTime="2025-11-24T13:06:24.4732591+01:00" endTime="2025-11-24T13:06:24.4732595+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="beb515b2-564d-48e1-9b2b-971f2102c693">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   1000</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eabe7248-57b4-480c-92b0-27d71158963f" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0015581" startTime="2025-11-24T13:06:21.3565167+01:00" endTime="2025-11-24T13:06:21.3565170+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eabe7248-57b4-480c-92b0-27d71158963f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   2</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="054aff09-2253-460f-82c8-e91ad50dae63" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 3, levels: 15, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:04.7761562" startTime="2025-11-24T13:07:04.2814039+01:00" endTime="2025-11-24T13:07:04.2814043+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="054aff09-2253-460f-82c8-e91ad50dae63" />
+    <UnitTestResult executionId="40ecfc15-6de0-4a22-b210-9506fd23ef20" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:01.4253956" startTime="2025-11-24T13:06:30.1133018+01:00" endTime="2025-11-24T13:06:30.1133026+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40ecfc15-6de0-4a22-b210-9506fd23ef20" />
+    <UnitTestResult executionId="af5e9955-2068-48cd-889f-4240d3e98eab" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.1012599" startTime="2025-11-24T13:06:30.2146314+01:00" endTime="2025-11-24T13:06:30.2146321+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af5e9955-2068-48cd-889f-4240d3e98eab" />
+    <UnitTestResult executionId="71468dbb-3eeb-42ac-bb90-237005788588" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.7131931" startTime="2025-11-24T13:07:06.4538098+01:00" endTime="2025-11-24T13:07:06.4538103+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71468dbb-3eeb-42ac-bb90-237005788588" />
+    <UnitTestResult executionId="c90c283f-d97d-49f4-974e-8a4a45b0053d" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.0003962" startTime="2025-11-24T13:06:19.5909748+01:00" endTime="2025-11-24T13:06:19.5909750+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c90c283f-d97d-49f4-974e-8a4a45b0053d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   342</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dfdb2e5e-e074-4197-b655-adee901e534b" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.1166388" startTime="2025-11-24T13:06:21.2490281+01:00" endTime="2025-11-24T13:06:21.2490287+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dfdb2e5e-e074-4197-b655-adee901e534b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   9901</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cf9bae29-ea48-4594-a83f-abf4334e1e39" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.9120683" startTime="2025-11-24T13:06:33.4022403+01:00" endTime="2025-11-24T13:06:33.4022407+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf9bae29-ea48-4594-a83f-abf4334e1e39" />
+    <UnitTestResult executionId="96b4cec2-5111-4d3d-95a2-b3ced4afb6b7" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 4000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:02.1283053" startTime="2025-11-24T13:06:57.1883184+01:00" endTime="2025-11-24T13:06:57.1883191+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96b4cec2-5111-4d3d-95a2-b3ced4afb6b7" />
+    <UnitTestResult executionId="362df753-c08f-4bdd-a0b8-096a4bfa03ca" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.4305712" startTime="2025-11-24T13:06:55.0599089+01:00" endTime="2025-11-24T13:06:55.0599092+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="362df753-c08f-4bdd-a0b8-096a4bfa03ca" />
+    <UnitTestResult executionId="cbee5ebd-38f8-4ccf-b9f6-aa779263679f" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 60, levels: 4, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.4590460" startTime="2025-11-24T13:07:05.7405256+01:00" endTime="2025-11-24T13:07:05.7405261+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbee5ebd-38f8-4ccf-b9f6-aa779263679f" />
+    <UnitTestResult executionId="f686e772-89c0-4d54-9b15-d5abdd5de0fb" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.0002262" startTime="2025-11-24T13:06:28.1487515+01:00" endTime="2025-11-24T13:06:28.1487517+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f686e772-89c0-4d54-9b15-d5abdd5de0fb" />
+    <UnitTestResult executionId="bd208a98-e4da-4f7d-a0d2-a7e0b0062cb9" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 22, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:04.2002708" startTime="2025-11-24T13:06:20.3759748+01:00" endTime="2025-11-24T13:06:20.3759752+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd208a98-e4da-4f7d-a0d2-a7e0b0062cb9" />
+    <UnitTestResult executionId="cb870021-ef5b-4e44-8612-ea3dfe3636f8" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:01.0176152" startTime="2025-11-24T13:06:21.1428517+01:00" endTime="2025-11-24T13:06:21.1428521+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb870021-ef5b-4e44-8612-ea3dfe3636f8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   122550</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fa1a4659-8721-4f92-9e4b-ad31ff4fd339" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.5228133" startTime="2025-11-24T13:06:20.1145971+01:00" endTime="2025-11-24T13:06:20.1145974+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa1a4659-8721-4f92-9e4b-ad31ff4fd339">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   349526</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="61512815-bd35-4d95-a89e-10ee391bdaac" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 60, levels: 4, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.7820294" startTime="2025-11-24T13:06:43.7455501+01:00" endTime="2025-11-24T13:06:43.7455505+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61512815-bd35-4d95-a89e-10ee391bdaac" />
+    <UnitTestResult executionId="fee1587a-4eda-4962-8f72-ed36f742b9ee" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 3, levels: 15, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:09.1497778" startTime="2025-11-24T13:06:29.5254454+01:00" endTime="2025-11-24T13:06:29.5254458+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fee1587a-4eda-4962-8f72-ed36f742b9ee" />
+    <UnitTestResult executionId="8ed80cbb-f8a1-462f-8fec-6d81236b180d" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.2085643" startTime="2025-11-24T13:06:28.0518702+01:00" endTime="2025-11-24T13:06:28.0518717+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ed80cbb-f8a1-462f-8fec-6d81236b180d" />
+    <UnitTestResult executionId="da52eb13-6419-47a6-9352-34cbb63bd2ef" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.0928546" startTime="2025-11-24T13:06:19.5848764+01:00" endTime="2025-11-24T13:06:19.5848766+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da52eb13-6419-47a6-9352-34cbb63bd2ef">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   1000</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="edb012d9-bb47-4de9-ae9b-f9bccdffd01e" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.1103547" startTime="2025-11-24T13:06:30.3251438+01:00" endTime="2025-11-24T13:06:30.3251444+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="edb012d9-bb47-4de9-ae9b-f9bccdffd01e" />
+    <UnitTestResult executionId="2cc1fff5-3242-497a-82ce-eda966a6dcb5" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0002120" startTime="2025-11-24T13:06:30.3253499+01:00" endTime="2025-11-24T13:06:30.3253500+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2cc1fff5-3242-497a-82ce-eda966a6dcb5" />
+    <UnitTestResult executionId="6f5c5599-e328-43d8-92b5-faf9b8ac8540" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:01.5194091" startTime="2025-11-24T13:06:25.9947898+01:00" endTime="2025-11-24T13:06:25.9947901+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f5c5599-e328-43d8-92b5-faf9b8ac8540" />
+    <UnitTestResult executionId="b9ff756c-1133-47da-9890-933c84187463" testId="27879345-80fd-dd35-c343-1507d7ae88a0" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 60, levels: 4, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:01.4728917" startTime="2025-11-24T13:06:54.6292505+01:00" endTime="2025-11-24T13:06:54.6292509+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9ff756c-1133-47da-9890-933c84187463" />
+    <UnitTestResult executionId="e503c934-d2b1-4db6-a604-cf5c47df1b80" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.3813271" startTime="2025-11-24T13:06:24.1025573+01:00" endTime="2025-11-24T13:06:24.1025575+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e503c934-d2b1-4db6-a604-cf5c47df1b80">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   122550</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f57441d0-3641-40af-9d27-6554fc02af6f" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.0058995" startTime="2025-11-24T13:06:19.5906113+01:00" endTime="2025-11-24T13:06:19.5906116+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f57441d0-3641-40af-9d27-6554fc02af6f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   2</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="df73fcc3-4579-42cf-a7bc-aba870980b25" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:00.1484548" startTime="2025-11-24T13:06:16.3350088+01:00" endTime="2025-11-24T13:06:16.3350359+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df73fcc3-4579-42cf-a7bc-aba870980b25">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   2</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c69f0397-20eb-48fc-bec2-b40ef071f880" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.3491975" startTime="2025-11-24T13:06:22.7072097+01:00" endTime="2025-11-24T13:06:22.7072101+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c69f0397-20eb-48fc-bec2-b40ef071f880">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   349526</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="54c09569-b580-43eb-bfe9-a1ac7e794a8c" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:00.0002896" startTime="2025-11-24T13:06:30.3256803+01:00" endTime="2025-11-24T13:06:30.3256805+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="54c09569-b580-43eb-bfe9-a1ac7e794a8c" />
+    <UnitTestResult executionId="b20d8f27-858f-478d-a4b8-889805b35d7f" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.5389614" startTime="2025-11-24T13:06:28.6878012+01:00" endTime="2025-11-24T13:06:28.6878024+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b20d8f27-858f-478d-a4b8-889805b35d7f" />
+    <UnitTestResult executionId="e8bb9782-441f-4e8c-a2f4-cce885664a07" testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { })" computerName="ACERNITRO5" duration="00:00:00.0003554" startTime="2025-11-24T13:06:28.1484988+01:00" endTime="2025-11-24T13:06:28.1484989+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8bb9782-441f-4e8c-a2f4-cce885664a07" />
+    <UnitTestResult executionId="c49b548d-eb8b-41d9-b9e1-99339b7acb90" testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" testName="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: SequentialMinimax { })" computerName="ACERNITRO5" duration="00:00:01.6930712" startTime="2025-11-24T13:06:19.3848444+01:00" endTime="2025-11-24T13:06:19.3848447+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c49b548d-eb8b-41d9-b9e1-99339b7acb90">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: -1&#xD;
+Actual:   122550</Message>
+          <StackTrace>   at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo) in D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs:line 64&#xD;
+   at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3e43f9c9-b61e-48f1-bfe0-73eb72169cbf" testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" testName="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 4000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { })" computerName="ACERNITRO5" duration="00:00:01.8967752" startTime="2025-11-24T13:06:46.0406732+01:00" endTime="2025-11-24T13:06:46.0406737+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e43f9c9-b61e-48f1-bfe0-73eb72169cbf" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork" storage="d:\old projects\minimax\tests\mininaxtests.unit\bin\debug\net8.0\mininaxtests.unit.dll" id="e6fd8268-36ec-4435-3cd7-9cf1ee19948f">
+      <Execution id="bd208a98-e4da-4f7d-a0d2-a7e0b0062cb9" />
+      <TestMethod codeBase="D:\Old Projects\Minimax\tests\MininaxTests.Unit\bin\Debug\net8.0\MininaxTests.Unit.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests" name="MinimaxAlgo_WhenMinPlayerFirst_ShouldWork" />
+    </UnitTest>
+    <UnitTest name="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork" storage="d:\old projects\minimax\tests\mininaxtests.unit\bin\debug\net8.0\mininaxtests.unit.dll" id="c1ee103b-9768-30a9-d0da-31299d93b1ab">
+      <Execution id="df73fcc3-4579-42cf-a7bc-aba870980b25" />
+      <TestMethod codeBase="D:\Old Projects\Minimax\tests\MininaxTests.Unit\bin\Debug\net8.0\MininaxTests.Unit.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MininaxTests.Unit.AlgorithmsTests.MinimaxTests" name="MinimaxAlgo_WhenMinPlayerFirst_ShouldWork" />
+    </UnitTest>
+    <UnitTest name="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork" storage="d:\old projects\minimax\tests\mininaxtests.unit\bin\debug\net8.0\mininaxtests.unit.dll" id="27879345-80fd-dd35-c343-1507d7ae88a0">
+      <Execution id="6f0275c5-3f6f-4527-9bea-e6ef078732f7" />
+      <TestMethod codeBase="D:\Old Projects\Minimax\tests\MininaxTests.Unit\bin\Debug\net8.0\MininaxTests.Unit.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MininaxTests.Unit.AlgorithmsTests.ParallelMinimaxTests" name="MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork" />
+    </UnitTest>
+    <UnitTest name="MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork" storage="d:\old projects\minimax\tests\mininaxtests.unit\bin\debug\net8.0\mininaxtests.unit.dll" id="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a">
+      <Execution id="e59fe5c7-8a49-4b9c-bb85-ee225d62fccf" />
+      <TestMethod codeBase="D:\Old Projects\Minimax\tests\MininaxTests.Unit\bin\Debug\net8.0\MininaxTests.Unit.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MininaxTests.Unit.AlgorithmsTests.MinimaxTests" name="MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="b1841ef1-8194-4c8d-8779-68bef95205d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="6f0275c5-3f6f-4527-9bea-e6ef078732f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="8ab3f957-bd36-4153-bcc8-3e6f961e4379" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="8d9bb80c-de87-4f7b-866d-04d9de103543" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="e1bcb125-1f8f-40c3-814a-efc73559ff1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="035f1610-4d29-4a43-afb7-1acae7f5ff5f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="7eaca0db-ab8a-4154-bb86-08e6575fe3f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="b7beaf29-d2c7-4709-b9df-a5dc1e525b47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="8ac92eed-caf3-4ac2-ae36-2ad5ee110b26" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="be41d3ee-25b6-455a-bb88-f4e80dae9294" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="62a0d49f-eef0-4bd0-94e7-8560852b2c67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="fe142781-b565-4f12-b55c-b67ba74da0f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="06c144eb-b85a-4d83-b73f-feda84077190" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="fa803f4a-d7df-46ed-b0fc-b2b8fa619e8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="26176a4f-b47a-46f4-8697-81ed0b5a4a86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="9ad6a9bb-5bae-4a41-8ec3-a3f3918cab01" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="b6eff9bd-e70a-4557-a5d2-69f8918b825f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="d9277218-bd8e-4a88-b1e3-96edcb89d698" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="c884cbe0-0db8-4329-852c-c81d420b0c26" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="e59fe5c7-8a49-4b9c-bb85-ee225d62fccf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="d3e7f723-034b-43b7-801b-c255f3a4e3e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="92c5b446-1bbd-4925-97ec-d2c8f97e9b22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="69651fd1-4568-406d-af86-0712b2e52992" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="beb515b2-564d-48e1-9b2b-971f2102c693" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="eabe7248-57b4-480c-92b0-27d71158963f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="054aff09-2253-460f-82c8-e91ad50dae63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="40ecfc15-6de0-4a22-b210-9506fd23ef20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="af5e9955-2068-48cd-889f-4240d3e98eab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="71468dbb-3eeb-42ac-bb90-237005788588" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="c90c283f-d97d-49f4-974e-8a4a45b0053d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="dfdb2e5e-e074-4197-b655-adee901e534b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="cf9bae29-ea48-4594-a83f-abf4334e1e39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="96b4cec2-5111-4d3d-95a2-b3ced4afb6b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="362df753-c08f-4bdd-a0b8-096a4bfa03ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="cbee5ebd-38f8-4ccf-b9f6-aa779263679f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="f686e772-89c0-4d54-9b15-d5abdd5de0fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="bd208a98-e4da-4f7d-a0d2-a7e0b0062cb9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="cb870021-ef5b-4e44-8612-ea3dfe3636f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="fa1a4659-8721-4f92-9e4b-ad31ff4fd339" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="61512815-bd35-4d95-a89e-10ee391bdaac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="fee1587a-4eda-4962-8f72-ed36f742b9ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="8ed80cbb-f8a1-462f-8fec-6d81236b180d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="da52eb13-6419-47a6-9352-34cbb63bd2ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="edb012d9-bb47-4de9-ae9b-f9bccdffd01e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="2cc1fff5-3242-497a-82ce-eda966a6dcb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="6f5c5599-e328-43d8-92b5-faf9b8ac8540" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27879345-80fd-dd35-c343-1507d7ae88a0" executionId="b9ff756c-1133-47da-9890-933c84187463" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="e503c934-d2b1-4db6-a604-cf5c47df1b80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="f57441d0-3641-40af-9d27-6554fc02af6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="df73fcc3-4579-42cf-a7bc-aba870980b25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="c69f0397-20eb-48fc-bec2-b40ef071f880" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="54c09569-b580-43eb-bfe9-a1ac7e794a8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="b20d8f27-858f-478d-a4b8-889805b35d7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b5a6bf-27b3-b59a-13e3-dc52ea6b590a" executionId="e8bb9782-441f-4e8c-a2f4-cce885664a07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1ee103b-9768-30a9-d0da-31299d93b1ab" executionId="c49b548d-eb8b-41d9-b9e1-99339b7acb90" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6fd8268-36ec-4435-3cd7-9cf1ee19948f" executionId="3e43f9c9-b61e-48f1-bfe0-73eb72169cbf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="56" executed="56" passed="38" failed="18" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.22)&#xD;
+[xUnit.net 00:00:00.37]   Discovering: MininaxTests.Unit&#xD;
+[xUnit.net 00:00:00.44]   Discovered:  MininaxTests.Unit&#xD;
+[xUnit.net 00:00:00.44]   Starting:    MininaxTests.Unit&#xD;
+[xUnit.net 00:00:00.63]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:00.63]       Expected: -1&#xD;
+[xUnit.net 00:00:00.63]       Actual:   2&#xD;
+[xUnit.net 00:00:00.63]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.63]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:00.63]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:00.63]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:00.64]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:00.65]       Expected: -1&#xD;
+[xUnit.net 00:00:00.65]       Actual:   342&#xD;
+[xUnit.net 00:00:00.65]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.65]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:00.65]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:00.65]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.99]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:01.99]       Expected: -1&#xD;
+[xUnit.net 00:00:01.99]       Actual:   349526&#xD;
+[xUnit.net 00:00:01.99]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.99]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:01.99]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.99]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.69]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.69]       Expected: -1&#xD;
+[xUnit.net 00:00:03.69]       Actual:   122550&#xD;
+[xUnit.net 00:00:03.69]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.69]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:03.69]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.69]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.79]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.79]       Expected: -1&#xD;
+[xUnit.net 00:00:03.79]       Actual:   9901&#xD;
+[xUnit.net 00:00:03.79]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.79]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:03.79]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.79]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.89]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.89]       Expected: -1&#xD;
+[xUnit.net 00:00:03.89]       Actual:   1000&#xD;
+[xUnit.net 00:00:03.89]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.89]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:03.89]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.89]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.89]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.89]       Expected: -1&#xD;
+[xUnit.net 00:00:03.89]       Actual:   2&#xD;
+[xUnit.net 00:00:03.89]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.89]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:03.89]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.89]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.89]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.89]       Expected: -1&#xD;
+[xUnit.net 00:00:03.89]       Actual:   342&#xD;
+[xUnit.net 00:00:03.89]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.89]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:03.89]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.89]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:04.41]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:04.42]       Expected: -1&#xD;
+[xUnit.net 00:00:04.42]       Actual:   349526&#xD;
+[xUnit.net 00:00:04.42]       Stack Trace:&#xD;
+[xUnit.net 00:00:04.42]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:04.42]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:04.42]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:05.43]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:05.44]       Expected: -1&#xD;
+[xUnit.net 00:00:05.44]       Actual:   122550&#xD;
+[xUnit.net 00:00:05.44]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.44]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:05.44]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:05.44]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:05.55]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:05.55]       Expected: -1&#xD;
+[xUnit.net 00:00:05.55]       Actual:   9901&#xD;
+[xUnit.net 00:00:05.55]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.55]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:05.55]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:05.55]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:05.66]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:05.66]       Expected: -1&#xD;
+[xUnit.net 00:00:05.66]       Actual:   1000&#xD;
+[xUnit.net 00:00:05.66]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.66]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:05.66]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:05.66]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:05.66]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:05.66]       Expected: -1&#xD;
+[xUnit.net 00:00:05.66]       Actual:   2&#xD;
+[xUnit.net 00:00:05.66]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.66]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:05.66]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:05.66]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:05.66]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:05.66]       Expected: -1&#xD;
+[xUnit.net 00:00:05.66]       Actual:   342&#xD;
+[xUnit.net 00:00:05.66]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.66]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:05.66]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:05.66]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:07.01]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:07.01]       Expected: -1&#xD;
+[xUnit.net 00:00:07.01]       Actual:   349526&#xD;
+[xUnit.net 00:00:07.01]       Stack Trace:&#xD;
+[xUnit.net 00:00:07.01]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:07.01]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:07.01]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:08.40]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:08.40]       Expected: -1&#xD;
+[xUnit.net 00:00:08.40]       Actual:   122550&#xD;
+[xUnit.net 00:00:08.40]       Stack Trace:&#xD;
+[xUnit.net 00:00:08.40]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:08.40]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:08.40]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:08.59]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:08.59]       Expected: -1&#xD;
+[xUnit.net 00:00:08.59]       Actual:   9901&#xD;
+[xUnit.net 00:00:08.60]       Stack Trace:&#xD;
+[xUnit.net 00:00:08.60]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:08.60]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:08.60]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:08.75]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:08.77]       Expected: -1&#xD;
+[xUnit.net 00:00:08.77]       Actual:   1000&#xD;
+[xUnit.net 00:00:08.77]       Stack Trace:&#xD;
+[xUnit.net 00:00:08.77]         D:\Old Projects\Minimax\tests\MininaxTests.Unit\AlgorithmsTests\MinimaxTests.cs(64,0): at MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Int32 brancingFactor, Int32 levels, IMinimax`1 algo)&#xD;
+[xUnit.net 00:00:08.77]            at InvokeStub_MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(Object, Span`1)&#xD;
+[xUnit.net 00:00:08.77]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:52.56]   Finished:    MininaxTests.Unit&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:16.3330087+01:00">
+        <Text>[xUnit.net 00:00:00.63]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:16.3443629+01:00">
+        <Text>[xUnit.net 00:00:00.64]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:17.6912442+01:00">
+        <Text>[xUnit.net 00:00:01.99]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:19.3844554+01:00">
+        <Text>[xUnit.net 00:00:03.68]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:19.4919524+01:00">
+        <Text>[xUnit.net 00:00:03.79]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:19.5845352+01:00">
+        <Text>[xUnit.net 00:00:03.89]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: SequentialMinimax { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:19.5905629+01:00">
+        <Text>[xUnit.net 00:00:03.89]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:19.5908305+01:00">
+        <Text>[xUnit.net 00:00:03.89]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:20.1141552+01:00">
+        <Text>[xUnit.net 00:00:04.41]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:21.1320091+01:00">
+        <Text>[xUnit.net 00:00:05.43]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:21.2489681+01:00">
+        <Text>[xUnit.net 00:00:05.55]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:21.3547309+01:00">
+        <Text>[xUnit.net 00:00:05.66]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_FirstLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:21.3560630+01:00">
+        <Text>[xUnit.net 00:00:05.66]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:21.3569722+01:00">
+        <Text>[xUnit.net 00:00:05.66]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 10, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:22.7068207+01:00">
+        <Text>[xUnit.net 00:00:07.01]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 2, levels: 20, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:24.1022256+01:00">
+        <Text>[xUnit.net 00:00:08.40]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 50, levels: 4, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:24.2938608+01:00">
+        <Text>[xUnit.net 00:00:08.59]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 100, levels: 3, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ACERNITRO5" outcome="Error" timestamp="2025-11-24T13:06:24.4505556+01:00">
+        <Text>[xUnit.net 00:00:08.75]     MininaxTests.Unit.AlgorithmsTests.MinimaxTests.MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(brancingFactor: 1000, levels: 2, algo: ParallelMinimax_ForEach_ChooseLevel { }) [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

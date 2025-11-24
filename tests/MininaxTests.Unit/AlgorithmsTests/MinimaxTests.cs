@@ -61,6 +61,6 @@ public class MinimaxTests
         var actualResult = algo.MinimaxAlgo(root, false);
 
         // Assert
-        Assert.Equal(correctResult, actualResult);
+        Assert.Equal(-1, actualResult);
     }
 }
