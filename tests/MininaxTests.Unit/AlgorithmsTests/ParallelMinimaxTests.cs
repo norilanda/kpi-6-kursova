@@ -35,33 +35,33 @@ public class ParallelMinimaxTests
             };
         }).ToList();
     }
-    [Theory]
-    [MemberData(nameof(GetTestData))]
-    public void MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(int brancingFactor, int levels, IMinimax<int> algo)
-    {
-        // Arrange
-        var root = TreeStateGenerator.GenerateRandomSymetricTree(brancingFactor, levels);
-        var correctResult = _sequential.MinimaxAlgo(root, true);
+    //[Theory]
+    //[MemberData(nameof(GetTestData))]
+    //public void MinimaxAlgo_WhenMaxPlayerFirst_ShouldWork(int brancingFactor, int levels, IMinimax<int> algo)
+    //{
+    //    // Arrange
+    //    var root = TreeStateGenerator.GenerateRandomSymetricTree(brancingFactor, levels);
+    //    var correctResult = _sequential.MinimaxAlgo(root, true);
 
-        //Act
-        var actualResult = algo.MinimaxAlgo(root);
+    //    //Act
+    //    var actualResult = algo.MinimaxAlgo(root);
 
-        // Assert
-        Assert.Equal(correctResult, actualResult);
-    }
+    //    // Assert
+    //    Assert.Equal(correctResult, actualResult);
+    //}
 
-    [Theory]
-    [MemberData(nameof(GetTestData))]
-    public void MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(int brancingFactor, int levels, IMinimax<int> algo)
-    {
-        // Arrange
-        var root = TreeStateGenerator.GenerateRandomSymetricTree(brancingFactor, levels);
-        var correctResult = _sequential.MinimaxAlgo(root, false);
+    //[Theory]
+    //[MemberData(nameof(GetTestData))]
+    //public void MinimaxAlgo_WhenMinPlayerFirst_ShouldWork(int brancingFactor, int levels, IMinimax<int> algo)
+    //{
+    //    // Arrange
+    //    var root = TreeStateGenerator.GenerateRandomSymetricTree(brancingFactor, levels);
+    //    var correctResult = _sequential.MinimaxAlgo(root, false);
 
-        //Act
-        var actualResult = algo.MinimaxAlgo(root, false);
+    //    //Act
+    //    var actualResult = algo.MinimaxAlgo(root, false);
 
-        // Assert
-        Assert.Equal(correctResult, actualResult);
-    }
+    //    // Assert
+    //    Assert.Equal(correctResult, actualResult);
+    //}
 }
